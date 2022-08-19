@@ -4,6 +4,10 @@ const message = document.querySelector(".message")
 /*Encrypt Text*/ 
 function encryptButton(){
 
+    if (inputTexto.value=="") {
+        alert("Write something to be encrypted!")
+    }
+
     const textoEncriptado = encriptar(inputTexto.value);
     message.value = textoEncriptado; 
     message.style.backgroundImage = "none";
@@ -32,6 +36,11 @@ function encriptar(string){
 
 /*Decrypt Text*/
 function decryptButton(){
+
+    if (inputTexto.value=="") {
+        alert("Write something to be decrypted!")
+    }
+
     const textoEncriptado = desencriptar(inputTexto.value);
     message.value = textoEncriptado; 
     message.style.backgroundImage = "none";
@@ -62,8 +71,15 @@ function desencriptar(string){
 const copyButton = document.querySelector(".copyButton");
 
 copyButton.onclick = function copyText(){
-    message.select();
-    document.execCommand("Copy");
+
+    if (inputTexto.value=="") {
+        alert("There´s nothing to copy yet!")
+    }
+
+    else{
+        message.select();
+        document.execCommand("Copy");
+    }
 }
 
 /*New De/Encryption*/
