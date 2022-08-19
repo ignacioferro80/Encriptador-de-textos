@@ -188,9 +188,25 @@ body{
     flex-grow: 0;
 }
 
+.message{
+    position: absolute;
+    width: 369px;
+    height: 575px;
+    left: 1244px;
+    top: 46px;
+    right: 40px;
+    bottom: 40px;
+
+    border:none;
+}
+
+.message:active{
+    border-color:#609ED4;
+}
+
 
 /*Buttons*/
-#encryptButton{
+.encryptButton{
     /*button*/
     position: absolute;
     flex-direction: row;
@@ -220,7 +236,7 @@ body{
     padding: 24px;
 }
 
-#encryptButton:hover{
+.encryptButton:hover{
     transition:0.5s;
     transform: scale(1.05);
     background-color: #609ED4;
@@ -304,7 +320,6 @@ body{
     order: 1;
     flex-grow: 0;
 }
-
 
 /*Rodapie*/
 .rodapie{

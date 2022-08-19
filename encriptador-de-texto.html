@@ -4,7 +4,9 @@
 
 <link rel="stylesheet" href="styleEncriptador.css">
 
-<html lang="es">
+<script src="scriptEncriptador.js"></script>
+
+<html lang="en">
 
     <head>
 
@@ -23,41 +25,13 @@
         <div>
             <!--<p class="insertText">Insert text here</p>-->
             <form class="insertTextForm">
-                <input id="encryptInput" type="text" required>
+                <input class="encryptInput" type="text" required>
                 <label class="lbl-text">
                     <span class="span-text">
                         Insert text here
                     </span>
                 </label>
             </form>
-
-            <script>
-
-                const encryptButton = document.getElementById("encryptButton");
-  
-                encryptButton.onclick = function accentVerification() {
-            
-                    let text = document.getElementById("encryptInput");
-            
-                    let aAccent = text.value.search("á");
-                    let eAccent = text.value.search("é");
-                    let iAccent = text.value.search("í");
-                    let oAccent = text.value.search("ó");
-                    let uAccent = text.value.search("ú");
-            
-                    if( aAccent >= 0 ||
-                        eAccent >= 0 ||
-                        iAccent >= 0 ||
-                        oAccent >= 0 ||
-                        uAccent >= 0) {
-            
-                        alert("Write words without accents")
-            
-                    } 
-            
-                }
-            
-            </script>
 
         </div>
 
@@ -70,19 +44,14 @@
                 <p class="noMessageFound">No message found</p>
                 <p class="writeTheText">Write the text you want to encrypt or decrypt</p>
                 
+                <textarea class="message" cols="18" rows="8"></textarea>
             </div>
         </div>
 
         <!--Buttons-->
         <div>
-            <button onclick="dessapearImage()" id="encryptButton">Encrypt</button>
-            <button onclick="dessapearImage()" class="desencriptarButton">Decrypt</button>
-
-            <script>
-                function dessapearImage(){
-                    document.getElementById("dissapearWhenClicked").style.display="none";
-                }
-            </script>
+            <button onclick="encryptButton()" class="encryptButton">Encrypt</button>
+            <button onclick="decryptButton()" class="desencriptarButton">Decrypt</button>
 
         </div>
 
