@@ -3,18 +3,15 @@ const message = document.querySelector(".message")
 
 function encryptButton(){
 
-    document.getElementById("dissapearWhenClicked").style.display="none";
-
     const textoEncriptado = encriptar(inputTexto.value);
     message.value = textoEncriptado; 
-    message.style.backgroundImage="none";
 }
 
 function encriptar(string){
     let matrizCódigo = [["e","enter"], 
                         ["i", "imes"], 
                         ["a", "ai"], 
-                        ["o", "ober"]
+                        ["o", "ober"],
                         ["u", "ufat"]];
     string = string.toLowerCase();
 
