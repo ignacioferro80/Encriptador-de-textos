@@ -31,18 +31,21 @@
                 </label>
             </form>
 
+            <button onclick="newEncryption()" class="newEncryptionButton">New de/encryption</button>
+
         </div>
 
-        <!--Drawing Rectangle-->
+        <!--Text Rectangle-->
         <div>
             <p class="whiteRectangle"></p>
-            <div id="dissapearWhenClicked">
+            <div>
                 
-                <img class="searchPicture" src="Imágenes-Encriptador/search picture.png">
+                <!-- <img class="searchPicture" src="Imágenes-Encriptador/search picture.png">
                 <p class="noMessageFound">No message found</p>
-                <p class="writeTheText">Write the text you want to encrypt or decrypt</p>
+                <p class="writeTheText">Write the text you want to encrypt or decrypt</p> -->
                 
                 <textarea class="message" cols="18" rows="8"></textarea>
+                <button onclick="copyText()" class="copyButton">Copy</button>
             </div>
         </div>
 
@@ -50,7 +53,6 @@
         <div>
             <button onclick="encryptButton()" class="encryptButton">Encrypt</button>
             <button onclick="decryptButton()" class="desencriptarButton">Decrypt</button>
-
         </div>
 
         <!--Warning-->
