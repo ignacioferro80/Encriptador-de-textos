@@ -80,6 +80,7 @@ copyButton.onclick = function copyText(){
         message.select();
         document.execCommand("Copy");
     }
+    
 }
 
 /*New De/Encryption*/
